@@ -10,10 +10,10 @@ app.use(express.json())
 const knex = require('knex')({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : 'kupola77',
-    database : 'smartbrain'
+    host : process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
   }
 });
 const PORT = process.env.PORT || 3000
