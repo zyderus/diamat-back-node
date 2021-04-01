@@ -24,7 +24,7 @@ const profile = require('./controllers/profile')
 const image = require('./controllers/image')
 // knex.select().from('users').then(data => console.log(data))
 
-app.get('/test', (req, res) => { res.json(req.body) })
+app.get('/test', (req, res) => { res.send('It works beautifully!!!') })
 app.get('/', (req, res) => { res.json('HOMEPAGE') })
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, knex, bcrypt) })
 app.post('/register', (req, res) => { register.handleRegister(req, res, knex, bcrypt) })
