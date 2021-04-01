@@ -10,7 +10,7 @@ app.use(express.json())
 const knex = require('knex')({
   client: 'pg',
   connection: {
-    host : process.env.DATABASE_URL,
+    host: process.env.DATABASE_URL,
     ssl: {
       rejectUnauthorized: false
     }
