@@ -1,4 +1,3 @@
-// import express from 'express'
 const bcrypt = require('bcrypt')
 const cors = require('cors')
 const express = require('express')
@@ -22,7 +21,6 @@ const register = require('./controllers/register')
 const signin = require('./controllers/signin')
 const profile = require('./controllers/profile')
 const image = require('./controllers/image')
-// knex.select().from('users').then(data => console.log(data))
 
 app.get('/', (req, res) => { res.send('It works beautifully!!!') })
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, knex, bcrypt) })
